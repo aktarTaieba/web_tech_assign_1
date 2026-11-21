@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #eaf0f6;
+        }
+
+        .container {
+            width: 450px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: inline-block;
+            margin-top: 12px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            min-height: 40px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+            overflow: hidden;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin: 10px 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button[type="reset"] {
+            background-color: gray;
+        }
+
+        button[type="reset"]:hover {
+            background-color: #555;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Registration Form</h2>
+
+        <form action="#" method="POST">
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="fullname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+
+            <br>
+
+            <label>Hobbies:</label><br>
+            <input type="checkbox" name="hobbies[]" value="Reading"> Reading
+            <input type="checkbox" name="hobbies[]" value="Sports"> Sports
+            <input type="checkbox" name="hobbies[]" value="Music"> Music
+            <input type="checkbox" name="hobbies[]" value="Gardening"> Gardening
+            <input type="checkbox" name="hobbies[]" value="Travelling"> Travelling
+
+            <br><br>
+
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+                <option value="">Select Department</option>
+                <option value="CSE">CSE</option>
+                <option value="EEE">EEE</option>
+                <option value="BBA">BBA</option>
+                <option value="CE">CE</option>
+                <option value="LAW">LAW</option>
+                <option value="ENGLISH">ENGLISH</option>
+
+            </select>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="phone">Telephone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address"
+                rows="2" oninput="this.style.height='auto';
+                this.style.height=this.scrollHeight+'px';">
+            </textarea>
+
+            <br>
+
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to Terms and Conditions</label>
+
+            <br>
+
+            <button type="submit">Register</button>
+            <button type="reset">Reset</button>
+
+        </form>
+
+        <p>Already have an account?
+            <a href="login.html">Login Here</a>
+        </p>
+
+    </div>
+
+</body>
+</html>
